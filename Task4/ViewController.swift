@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var countButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
-    var count = 0
+//privateをつける
+    @IBOutlet private weak var countLabel: UILabel!
+    @IBOutlet private weak var countButton: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
+    private var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearAction(_ sender: Any) {
-        count = Int()
+        count = 0 //Int()ではなく０で良い
         countLabel.text = String(count)
     }
     
